@@ -1,0 +1,20 @@
+{
+  "name": "db-guardian-backend",
+  "version": "1.0.0",
+  "description": "Backend Fastify for DB-Guardian",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20.15.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.5.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "oracledb": "^6.7.0"
+  }
+}

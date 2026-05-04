@@ -1,0 +1,50 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(0, 24, 168, 0.15), transparent 34%),
+    radial-gradient(circle at 88% 0%, rgba(0, 163, 180, 0.12), transparent 30%),
+    #f4f7fd;
+  color: #101828;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border-color: #d0d5dd;
+}
+
+.ql-toolbar .ql-formats button.ql-attach::before {
+  content: '\1F4CE';
+  font-size: 16px;
+  line-height: 1;
+}
+
+.ql-editor {
+  min-height: 260px;
+  font-size: 14px;
+}
+
+.solution-html a {
+  color: #0018a8;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.solution-html p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.solution-html h1,
+.solution-html h2,
+.solution-html h3 {
+  margin: 18px 0 8px;
+  line-height: 1.3;
+}
