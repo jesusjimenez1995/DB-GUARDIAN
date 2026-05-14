@@ -6,7 +6,10 @@ import {
   computeStats,
   findIncidentById,
   findPlaybookById,
+<<<<<<< HEAD
   rankResolvedIncidents,
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   lookupPlaybooksMock,
   mockIncidents,
   nextIncidentId
@@ -173,6 +176,7 @@ app.get('/api/incidents/:id', async (request, reply) => {
   }
 });
 
+<<<<<<< HEAD
 async function fetchResolvedIncidentPool(connection) {
   if (useMocks) {
     return mockIncidents.filter((incident) =>
@@ -248,6 +252,8 @@ app.post('/api/recommendations', async (request, reply) => {
   }
 });
 
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 app.post('/api/incidents', async (request, reply) => {
   const { appName, errorCode, titulo, descripcion, estado, prioridad, asignadoA } = request.body || {};
 

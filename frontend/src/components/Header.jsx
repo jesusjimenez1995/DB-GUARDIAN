@@ -34,6 +34,7 @@ function Header() {
             }}
           >
             <Stack direction="row" alignItems="center" spacing={1.2} sx={{ minWidth: 0 }}>
+<<<<<<< HEAD
               <Box
                 sx={{
                   width: { xs: 34, md: 38 },
@@ -55,6 +56,29 @@ function Header() {
                   DB-Guardian
                 </Typography>
               </Box>
+=======
+            <Box
+              sx={{
+                width: { xs: 34, md: 38 },
+                height: { xs: 34, md: 38 },
+                borderRadius: 2,
+                bgcolor: 'rgba(255,255,255,0.14)',
+                display: 'grid',
+                placeItems: 'center',
+                border: '1px solid rgba(255,255,255,0.25)'
+              }}
+            >
+              <ShieldOutlinedIcon sx={{ color: 'white', fontSize: { xs: 18, md: 20 } }} />
+            </Box>
+            <Box>
+              <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.75)', letterSpacing: 1.2, lineHeight: 1.1 }}>
+                DEUTSCHE BANK
+              </Typography>
+              <Typography sx={{ lineHeight: 1.1, color: 'white', fontWeight: 700, fontSize: { xs: '1rem', md: '1.08rem' } }}>
+                DB-Guardian
+              </Typography>
+            </Box>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
             </Stack>
 
             <Box
@@ -108,6 +132,7 @@ function Header() {
             </Box>
 
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', order: { xs: 2, md: 3 } }}>
+<<<<<<< HEAD
               <Button
                 component={NavLink}
                 to="/incidencias/nueva"
@@ -125,6 +150,27 @@ function Header() {
               >
                 <Box component="span">Nueva Incidencia</Box>
               </Button>
+=======
+            <Button
+              component={NavLink}
+              to="/incidencias/nueva"
+              variant="contained"
+              color="secondary"
+              size="medium"
+              startIcon={<AddOutlinedIcon />}
+              sx={{
+                color: 'white',
+                px: { xs: 1.5, sm: 1.9 },
+                minWidth: 0,
+                borderRadius: 999,
+                '& .MuiButton-startIcon': { mr: { xs: 0.35, sm: 0.7 } }
+              }}
+            >
+              <Box component="span">
+                Nueva Incidencia
+              </Box>
+            </Button>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
             </Box>
           </Box>
         </Box>

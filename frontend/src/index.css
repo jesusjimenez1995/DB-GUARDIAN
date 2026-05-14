@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,20 +19,33 @@
 
 html {
   scroll-behavior: smooth;
+=======
+:root {
+  color-scheme: light;
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 }
 
 body {
   margin: 0;
+<<<<<<< HEAD
   background: var(--db-bg);
   color: var(--db-text);
   font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
   text-rendering: optimizeLegibility;
+=======
+  background:
+    radial-gradient(circle at 8% 12%, rgba(0, 24, 168, 0.15), transparent 34%),
+    radial-gradient(circle at 88% 0%, rgba(0, 163, 180, 0.12), transparent 30%),
+    #f4f7fd;
+  color: #101828;
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 }
 
 #root {
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
 a,
 button,
 input,
@@ -70,6 +84,11 @@ textarea,
 .ql-toolbar.ql-snow,
 .ql-container.ql-snow {
   border-color: var(--db-border);
+=======
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border-color: #d0d5dd;
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 }
 
 .ql-toolbar .ql-formats button.ql-attach::before {
@@ -84,7 +103,11 @@ textarea,
 }
 
 .solution-html a {
+<<<<<<< HEAD
   color: var(--db-blue);
+=======
+  color: #0018a8;
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   font-weight: 600;
   text-decoration: underline;
 }

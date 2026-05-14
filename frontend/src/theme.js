@@ -3,6 +3,7 @@ import { createTheme } from '@mui/material/styles';
 const palette = {
   primary: {
     main: '#0018A8',
+<<<<<<< HEAD
     light: '#2443B3',
     dark: '#00126E',
     contrastText: '#FFFFFF'
@@ -26,6 +27,30 @@ const palette = {
   },
   success: {
     main: '#0F6B4A'
+=======
+    light: '#2742C9',
+    dark: '#001075',
+    contrastText: '#FFFFFF'
+  },
+  secondary: {
+    main: '#00A3B4',
+    light: '#38BFCD',
+    dark: '#00717D'
+  },
+  background: {
+    default: '#F4F7FD',
+    paper: '#FFFFFF'
+  },
+  text: {
+    primary: '#101828',
+    secondary: '#475467'
+  },
+  warning: {
+    main: '#B54708'
+  },
+  success: {
+    main: '#067647'
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   },
   error: {
     main: '#B42318'
@@ -35,7 +60,11 @@ const palette = {
 const theme = createTheme({
   palette,
   shape: {
+<<<<<<< HEAD
     borderRadius: 12
+=======
+    borderRadius: 16
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   },
   typography: {
     fontFamily: '"IBM Plex Sans", "Segoe UI", sans-serif',
@@ -57,8 +86,13 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
+<<<<<<< HEAD
           border: '1px solid #D9DEE8',
           boxShadow: '0 1px 2px rgba(17, 24, 39, 0.05), 0 10px 22px rgba(17, 24, 39, 0.05)'
+=======
+          border: '1px solid #EAECF0',
+          boxShadow: '0 1px 2px rgba(16, 24, 40, 0.06), 0 8px 24px rgba(16, 24, 40, 0.06)'
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
         }
       }
     },
@@ -73,6 +107,7 @@ const theme = createTheme({
           textTransform: 'none',
           fontWeight: 700,
           minHeight: 38,
+<<<<<<< HEAD
           paddingInline: 16,
           '&:focus-visible': {
             outline: 'none',
@@ -88,6 +123,9 @@ const theme = createTheme({
           '&:hover': {
             backgroundColor: '#2A4A78'
           }
+=======
+          paddingInline: 16
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
         }
       }
     },

@@ -303,6 +303,7 @@ Configurado \`UNDO_RETENTION = 21600\` de forma permanente. Revisadas otras cons
       { ESTADO: 'EN INVESTIGACIÓN', FECHA: ago(15 * 24 * 60 - 30), COMENTARIO: 'Analizando parámetros de UNDO y retención' },
       { ESTADO: 'SOLUCIONADA', FECHA: ago(15 * 24 * 60 - 120), COMENTARIO: 'UNDO_RETENTION incrementado y conciliación re-ejecutada' }
     ]
+<<<<<<< HEAD
   },
   {
     ID: 9009,
@@ -436,6 +437,8 @@ Se validó el listener de Oracle y se detectó congestión temporal de red en la
       { ESTADO: 'ASIGNADA', FECHA: ago(20 * 60 - 10), COMENTARIO: 'Asignada a Equipo DBA' },
       { ESTADO: 'SOLUCIONADA', FECHA: ago(20 * 60 - 80), COMENTARIO: 'Listener validado y ventana ajustada' }
     ]
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   }
 ];
 
@@ -464,6 +467,7 @@ export function computeStats() {
   return { total: mockIncidents.length, byStatus, byApp };
 }
 
+<<<<<<< HEAD
 const SOLVED_STATUSES = new Set(['SOLUCIONADA', 'CERRADA']);
 
 function stripMarkdown(value) {
@@ -481,12 +485,17 @@ function normalize(value) {
     .replace(/[^a-zA-Z0-9]+/g, ' ')
     .trim()
     .toUpperCase();
+=======
+function normalize(value) {
+  return String(value || '').trim().toUpperCase();
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 }
 
 function includesEither(a, b) {
   return a.includes(b) || b.includes(a);
 }
 
+<<<<<<< HEAD
 function tokenize(value) {
   return new Set(
     normalize(value)
@@ -598,6 +607,8 @@ export function rankResolvedIncidents(source, incidents, { excludeId } = {}) {
     .slice(0, 5);
 }
 
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 function similarityScore(a, b) {
   if (!a || !b) return 0;
   if (a === b) return 100;

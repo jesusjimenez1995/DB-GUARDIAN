@@ -27,10 +27,16 @@ import DOMPurify from 'dompurify';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeSanitize from 'rehype-sanitize';
+<<<<<<< HEAD
 import { advanceIncidentStatus, fetchIncident, fetchIncidentRecommendations, fetchUsers, updateIncident } from '../api';
 import PriorityBadge from '../components/PriorityBadge';
 import RichSolutionEditor from '../components/RichSolutionEditor';
 import ResolvedIncidentsPanel from '../components/ResolvedIncidentsPanel';
+=======
+import { advanceIncidentStatus, fetchIncident, fetchUsers, updateIncident } from '../api';
+import PriorityBadge from '../components/PriorityBadge';
+import RichSolutionEditor from '../components/RichSolutionEditor';
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 import StatusBadge from '../components/StatusBadge';
 import StatusTimeline from '../components/StatusTimeline';
 import { getNextStatus } from '../constants';
@@ -60,9 +66,12 @@ function IncidentDetail() {
   const [users, setUsers] = useState([]);
   const [usersLoading, setUsersLoading] = useState(false);
   const [selectedAssignee, setSelectedAssignee] = useState('');
+<<<<<<< HEAD
   const [similarIncidents, setSimilarIncidents] = useState([]);
   const [similarLoading, setSimilarLoading] = useState(false);
   const [similarError, setSimilarError] = useState('');
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 
   const load = async () => {
     setLoading(true);
@@ -71,6 +80,7 @@ function IncidentDetail() {
       const res = await fetchIncident(id);
       setIncident(res.data);
       setSolucionDraft(res.data.SOLUCION || '');
+<<<<<<< HEAD
 
       setSimilarLoading(true);
       setSimilarError('');
@@ -82,6 +92,8 @@ function IncidentDetail() {
       } finally {
         setSimilarLoading(false);
       }
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
     } catch (e) {
       setError(e.message || 'No se pudo cargar la incidencia');
     } finally {
@@ -198,9 +210,15 @@ function IncidentDetail() {
 
       <Card>
         <CardContent sx={{ p: { xs: 2, md: 2.4 } }}>
+<<<<<<< HEAD
           <Stack direction={{ xs: 'column', md: 'row' }} sx={{ justifyContent: 'space-between' }} gap={1.6}>
             <Box>
               <Stack direction="row" spacing={1} sx={{ alignItems: 'center', flexWrap: 'wrap', mb: 1 }}>
+=======
+          <Stack direction={{ xs: 'column', md: 'row' }} justifyContent="space-between" gap={1.6}>
+            <Box>
+              <Stack direction="row" spacing={1} alignItems="center" mb={1} flexWrap="wrap">
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
                 <StatusBadge status={incident.ESTADO} />
                 <PriorityBadge priority={incident.PRIORIDAD} />
                 <Typography variant="caption" sx={{ px: 1.1, py: 0.4, bgcolor: '#F2F4F7', borderRadius: 999 }}>
@@ -242,6 +260,7 @@ function IncidentDetail() {
         </CardContent>
       </Card>
 
+<<<<<<< HEAD
       <ResolvedIncidentsPanel
         title="Incidencias resueltas similares"
         subtitle="Casos cerrados o solucionados con documentación útil para guiar la resolución actual."
@@ -251,6 +270,8 @@ function IncidentDetail() {
         emptyMessage="Todavía no existen coincidencias resueltas para esta incidencia."
       />
 
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
       <Card>
         <CardContent>
           <Box
@@ -265,7 +286,11 @@ function IncidentDetail() {
             <Box sx={{ minWidth: 0 }}>
               <Typography variant="subtitle1" fontWeight={700}>Resolucion y Base de Conocimiento</Typography>
               <Typography variant="body2" color="text.secondary">
+<<<<<<< HEAD
                 Documenta la solución final con criterio operativo para que el caso quede reutilizable por cualquier equipo de soporte.
+=======
+                Editor enriquecido con estilos, enlaces y adjuntos para documentar la solucion final del caso.
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
               </Typography>
             </Box>
 
@@ -328,7 +353,11 @@ function IncidentDetail() {
             <Stack spacing={0.6} mt={1.2}>
               {[...incident.HISTORIAL].reverse().map((entry, idx) => (
                 <Box key={`${entry.ESTADO}-${entry.FECHA}-${idx}`}>
+<<<<<<< HEAD
                   <Stack direction="row" spacing={1} sx={{ alignItems: 'center', flexWrap: 'wrap' }}>
+=======
+                  <Stack direction="row" spacing={1} alignItems="center" flexWrap="wrap">
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
                     <StatusBadge status={entry.ESTADO} />
                     <Typography variant="caption" color="text.secondary">{fmt(entry.FECHA)}</Typography>
                     {entry.USUARIO ? <Typography variant="caption" color="text.secondary">{entry.USUARIO}</Typography> : null}

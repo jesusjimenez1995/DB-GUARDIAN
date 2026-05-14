@@ -20,7 +20,10 @@ import {
   TextField,
   Typography
 } from '@mui/material';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 import { fetchIncidents } from '../api';
 import PriorityBadge from '../components/PriorityBadge';
 import StatusBadge from '../components/StatusBadge';
@@ -67,6 +70,7 @@ function IncidentList() {
     );
   });
 
+<<<<<<< HEAD
   const openCount = filtered.filter((inc) => !['SOLUCIONADA', 'CERRADA'].includes(inc.ESTADO)).length;
   const escalatedCount = filtered.filter((inc) => inc.ESTADO === 'ESCALADA').length;
   const withSolutionCount = filtered.filter((inc) => Boolean(inc.SOLUCION)).length;
@@ -93,6 +97,18 @@ function IncidentList() {
       </Box>
 
       <Card component={motion.div} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.12 }}>
+=======
+  return (
+    <Stack spacing={2}>
+      <Box>
+        <Typography variant="h4">Libro Maestro de Incidencias</Typography>
+        <Typography color="text.secondary">
+          Filtra por aplicacion, criticidad y estado para priorizar el backlog operativo.
+        </Typography>
+      </Box>
+
+      <Card>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
         <CardContent>
           <Box
             sx={{
@@ -150,12 +166,20 @@ function IncidentList() {
       {loading ? (
         <LinearProgress />
       ) : (
+<<<<<<< HEAD
         <Card component={motion.div} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.18 }}>
+=======
+        <Card>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
           <CardContent sx={{ p: 0 }}>
             <TableContainer>
               <Table size="small" sx={{ minWidth: 860 }}>
                 <TableHead>
+<<<<<<< HEAD
                   <TableRow sx={{ bgcolor: '#F8FAFC' }}>
+=======
+                  <TableRow sx={{ bgcolor: '#F9FAFB' }}>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
                     <TableCell>ID</TableCell>
                     <TableCell>Aplicacion</TableCell>
                     <TableCell>Titulo</TableCell>
@@ -179,7 +203,10 @@ function IncidentList() {
                   <TableRow
                     key={inc.ID}
                     hover
+<<<<<<< HEAD
                     sx={{ '&:hover': { bgcolor: '#F8FAFC' } }}
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
                   >
                     <TableCell sx={{ color: 'text.secondary' }}>#{inc.ID}</TableCell>
                     <TableCell>

@@ -14,6 +14,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+<<<<<<< HEAD
     sourcemap: false,
     chunkSizeWarningLimit: 900,
     rollupOptions: {
@@ -33,5 +34,8 @@ export default defineConfig({
         }
       }
     }
+=======
+    sourcemap: false
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   }
 });

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { Card, CardContent, Divider, Link, Stack, Typography } from '@mui/material';
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
@@ -6,6 +10,7 @@ import rehypeSanitize from 'rehype-sanitize';
 function PlaybookViewer({ playbook }) {
   if (!playbook) {
     return (
+<<<<<<< HEAD
       <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-dbBlue">Playbook viewer</p>
         <h3 className="mt-2 text-lg font-semibold text-slate-900">Selecciona una sugerencia</h3>
@@ -13,10 +18,21 @@ function PlaybookViewer({ playbook }) {
           El contenido histórico aparecerá aquí con una lectura limpia y sin bordes pesados.
         </p>
       </section>
+=======
+      <Card>
+        <CardContent>
+          <Typography variant="h6">Playbook Viewer</Typography>
+          <Typography sx={{ mt: 1 }} color="text.secondary" variant="body2">
+          Selecciona una sugerencia para visualizar el procedimiento historico.
+          </Typography>
+        </CardContent>
+      </Card>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
     );
   }
 
   return (
+<<<<<<< HEAD
     <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
       <div className="flex items-start justify-between gap-3 border-b border-slate-200 pb-4">
         <div>
@@ -47,6 +63,37 @@ function PlaybookViewer({ playbook }) {
         </div>
       ) : null}
     </section>
+=======
+    <Card>
+      <CardContent>
+        <Stack spacing={1}>
+          <Typography variant="overline" color="primary.main">
+            Playbook Asociado
+          </Typography>
+          <Typography variant="h6">{playbook.ERROR_MATCH}</Typography>
+        </Stack>
+        <Divider sx={{ my: 2 }} />
+        <Typography component="div" variant="body2" sx={{ '& ul, & ol': { pl: 2.5 } }}>
+          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSanitize]}>
+            {playbook.PROCEDIMIENTO_CLOB || ''}
+          </ReactMarkdown>
+        </Typography>
+
+        {playbook.LINKS_INTERNOS ? (
+          <>
+            <Divider sx={{ mt: 2, mb: 1.5 }} />
+            <Link
+            href={playbook.LINKS_INTERNOS}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver documentacion interna
+            </Link>
+          </>
+        ) : null}
+      </CardContent>
+    </Card>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   );
 }
 

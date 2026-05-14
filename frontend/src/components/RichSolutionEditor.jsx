@@ -108,6 +108,7 @@ function RichSolutionEditor({ value, onChange, readOnly = false }) {
         Usa el panel para aplicar estilos, insertar enlaces o adjuntar archivos (PDF, Word, Excel, texto o imagen).
       </Typography>
       {attachError ? <Alert severity="warning">{attachError}</Alert> : null}
+<<<<<<< HEAD
       <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
         <ReactQuill
           ref={quillRef}
@@ -120,6 +121,17 @@ function RichSolutionEditor({ value, onChange, readOnly = false }) {
           className="db-quill"
         />
       </div>
+=======
+      <ReactQuill
+        ref={quillRef}
+        theme="snow"
+        value={value}
+        onChange={onChange}
+        modules={modules}
+        formats={formats}
+        readOnly={readOnly}
+      />
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
       <input
         ref={fileInputRef}
         type="file"

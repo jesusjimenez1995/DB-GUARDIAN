@@ -8,6 +8,7 @@ Plataforma de gestion de incidencias criticas con stack React (Vite) + Fastify +
 - `backend/server.js`: API Fastify y conexion Oracle con `oracledb` en Thin Mode.
 - `frontend/`: SPA React + Tailwind lista para build estatico.
 
+<<<<<<< HEAD
 ## Inicio rapido (recomendado)
 
 Desde la raiz del repositorio:
@@ -22,6 +23,8 @@ Esto levanta:
 - Frontend (Vite): `http://localhost:5173`
 - Backend (Fastify): `http://localhost:3001`
 
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 ## 1) Preparar Oracle
 
 1. Crear usuario/esquema para la app (ejemplo):

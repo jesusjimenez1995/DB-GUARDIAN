@@ -62,6 +62,7 @@ export async function lookupPlaybooks(query) {
 export async function fetchPlaybook(id) {
   return request(`/api/playbooks/${id}`);
 }
+<<<<<<< HEAD
 
 export async function fetchIncidentRecommendations(id) {
   return request(`/api/incidents/${id}/recommendations`);
@@ -73,3 +74,5 @@ export async function fetchResolvedIncidentRecommendations(payload) {
     body: JSON.stringify(payload)
   });
 }
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0

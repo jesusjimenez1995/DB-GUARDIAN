@@ -4,7 +4,10 @@ import {
   Box,
   Card,
   CardContent,
+<<<<<<< HEAD
   Chip,
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   LinearProgress,
   Stack,
   Table,
@@ -15,6 +18,7 @@ import {
   TableRow,
   Typography
 } from '@mui/material';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
   Bar,
@@ -24,6 +28,8 @@ import {
   XAxis,
   YAxis
 } from 'recharts';
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 import { fetchIncidents, fetchStats } from '../api';
 import KpiCard from '../components/KpiCard';
 import PriorityBadge from '../components/PriorityBadge';
@@ -31,9 +37,15 @@ import StatusBadge from '../components/StatusBadge';
 
 const STATUS_KPI = [
   { key: 'NUEVA', tone: '#667085' },
+<<<<<<< HEAD
   { key: 'ASIGNADA', tone: '#1F3F9C' },
   { key: 'EN INVESTIGACIÓN', tone: '#334155', label: 'Investigacion' },
   { key: 'ESCALADA', tone: '#9A6700' }
+=======
+  { key: 'ASIGNADA', tone: '#175CD3' },
+  { key: 'EN INVESTIGACIÓN', tone: '#B54708', label: 'Investigación' },
+  { key: 'ESCALADA', tone: '#C4320A' }
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 ];
 
 function fmt(dateStr) {
@@ -45,7 +57,10 @@ function Dashboard() {
   const [stats, setStats] = useState(null);
   const [incidents, setIncidents] = useState([]);
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
   const [chartsReady, setChartsReady] = useState(false);
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
 
   useEffect(() => {
     Promise.all([fetchStats(), fetchIncidents()])
@@ -56,12 +71,15 @@ function Dashboard() {
       .finally(() => setLoading(false));
   }, []);
 
+<<<<<<< HEAD
   useEffect(() => {
     if (loading) return;
     const timer = window.setTimeout(() => setChartsReady(true), 180);
     return () => window.clearTimeout(timer);
   }, [loading]);
 
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
   if (loading) {
     return <LinearProgress sx={{ mt: 2 }} />;
   }
@@ -71,6 +89,7 @@ function Dashboard() {
     - (stats?.byStatus?.CERRADA || 0);
 
   const resolved = (stats?.byStatus?.SOLUCIONADA || 0) + (stats?.byStatus?.CERRADA || 0);
+<<<<<<< HEAD
   const incidentsWithSolution = incidents.filter((item) => Boolean(item.SOLUCION)).length;
   const knowledgeCoverage = incidents.length ? Math.round((incidentsWithSolution / incidents.length) * 100) : 0;
 
@@ -92,10 +111,23 @@ function Dashboard() {
         <Typography variant="h4">Centro de Control de Incidencias</Typography>
         <Typography color="text.secondary" sx={{ mt: 0.5 }}>
           Vista ejecutiva para seguimiento de riesgo operativo, saturacion por aplicacion y nivel de reutilizacion del conocimiento.
+=======
+
+  return (
+    <Stack spacing={2.4}>
+      <Box>
+        <Typography variant="overline" color="primary.main" sx={{ letterSpacing: 1.4 }}>
+          Operations Pulse
+        </Typography>
+        <Typography variant="h4">Centro de Control de Incidencias</Typography>
+        <Typography color="text.secondary" sx={{ mt: 0.5 }}>
+          Supervisa riesgo operativo, saturacion por aplicacion y velocidad de resolucion del equipo.
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
         </Typography>
       </Box>
 
       <Box
+<<<<<<< HEAD
         component={motion.div}
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
@@ -142,12 +174,15 @@ function Dashboard() {
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45, delay: 0.12 }}
+=======
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
         sx={{
           display: 'grid',
           gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' },
           gap: 2
         }}
       >
+<<<<<<< HEAD
         <KpiCard label="Total registradas" value={stats?.total || 0} color="blue" />
         <KpiCard label="Abiertas" value={open} color="amber" />
         <KpiCard label="Escaladas" value={stats?.byStatus?.ESCALADA || 0} color="orange" />
@@ -155,6 +190,15 @@ function Dashboard() {
       </Box>
 
       <Card component={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.45, delay: 0.16 }} sx={{ bgcolor: '#FCFCFD' }}>
+=======
+          <KpiCard label="Total registradas" value={stats?.total || 0} color="blue" />
+          <KpiCard label="Abiertas" value={open} color="amber" />
+          <KpiCard label="Escaladas" value={stats?.byStatus?.ESCALADA || 0} color="orange" />
+          <KpiCard label="Resueltas / Cerradas" value={resolved} color="green" />
+      </Box>
+
+      <Card sx={{ bgcolor: '#FCFCFD' }}>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
         <CardContent sx={{ p: 0 }}>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', md: 'repeat(4, 1fr)' } }}>
             {STATUS_KPI.map(({ key, tone, label }, index) => (
@@ -182,6 +226,7 @@ function Dashboard() {
         </CardContent>
       </Card>
 
+<<<<<<< HEAD
       <Box
         component={motion.div}
         initial={{ opacity: 0, y: 12 }}
@@ -189,11 +234,15 @@ function Dashboard() {
         transition={{ duration: 0.45, delay: 0.2 }}
         sx={{ display: 'grid', gap: 2, gridTemplateColumns: { xs: '1fr', lg: 'minmax(0, 1fr) minmax(0, 1fr)' } }}
       >
+=======
+      <Box sx={{ display: 'grid', gap: 2, gridTemplateColumns: { xs: '1fr', lg: '320px 1fr' } }}>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
         <Card>
           <CardContent>
             <Typography variant="subtitle2" sx={{ mb: 2, fontWeight: 700 }}>
               Incidencias por Aplicacion
             </Typography>
+<<<<<<< HEAD
             <Box sx={{ height: 250 }}>
               {chartsReady ? (
                 <BarChart
@@ -212,11 +261,31 @@ function Dashboard() {
                 <LinearProgress sx={{ mt: 8 }} />
               )}
             </Box>
+=======
+            <Stack spacing={1.8}>
+            {Object.entries(stats?.byApp || {})
+              .sort((a, b) => b[1] - a[1])
+              .map(([app, count]) => (
+                <Box key={app}>
+                  <Stack direction="row" justifyContent="space-between">
+                    <Typography variant="body2" fontWeight={600}>{app}</Typography>
+                    <Typography variant="body2" fontWeight={700}>{count}</Typography>
+                  </Stack>
+                  <LinearProgress
+                    variant="determinate"
+                    value={Math.min((count / (stats?.total || 1)) * 100, 100)}
+                    sx={{ mt: 0.6, height: 8, borderRadius: 999, bgcolor: '#EEF2F6' }}
+                  />
+                </Box>
+              ))}
+            </Stack>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
           </CardContent>
         </Card>
 
         <Card>
           <CardContent>
+<<<<<<< HEAD
             <Typography variant="subtitle2" fontWeight={700} sx={{ mb: 1.8 }}>Mix de estados críticos</Typography>
             <Box sx={{ height: 250, mb: 1.4 }}>
               {chartsReady ? (
@@ -253,6 +322,15 @@ function Dashboard() {
             </Typography>
           </Stack>
           <TableContainer>
+=======
+            <Stack direction="row" justifyContent="space-between" alignItems="center" mb={1}>
+              <Typography variant="subtitle2" fontWeight={700}>Incidencias Recientes</Typography>
+              <Typography component={Link} to="/incidencias" color="primary.main" sx={{ fontWeight: 700, textDecoration: 'none' }}>
+                Ver todas
+              </Typography>
+            </Stack>
+            <TableContainer>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
               <Table size="small">
                 <TableHead>
                   <TableRow>
@@ -293,9 +371,16 @@ function Dashboard() {
                 ))}
                 </TableBody>
               </Table>
+<<<<<<< HEAD
           </TableContainer>
         </CardContent>
       </Card>
+=======
+            </TableContainer>
+          </CardContent>
+        </Card>
+      </Box>
+>>>>>>> 1cced019334f5861a6b7e6c3cafb1e59f10d0ba0
     </Stack>
   );
 }
